@@ -19,9 +19,14 @@ body {
 
 h2 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: #2B3D41;
+  letter-spacing: 2px;
+}
+
+.h2-white {
   color: #fff;
 }
 
@@ -38,8 +43,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
-  -webkit-box-shadow: 1px 0px 4px 1px #000000;
-          box-shadow: 1px 0px 4px 1px #000000;
 }
 
 #top-header a {
@@ -67,6 +70,8 @@ header {
   position: relative;
   z-index: 2;
   background-color: #fff;
+  -webkit-box-shadow: 0px 0.5px 5px 0.1px #1d292b;
+          box-shadow: 0px 0.5px 5px 0.1px #1d292b;
 }
 
 #bottom-header #logo {
@@ -85,7 +90,7 @@ header {
 
 #bottom-header #logo a span {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: none;
   letter-spacing: normal;
   color: #2B3D41;
@@ -107,7 +112,9 @@ header {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #fff;
-  font-weight: 700;
+  font-size: 17px;
+  margin-left: 40px;
+  font-weight: 500;
 }
 
 #bottom-header ul :last-child a:hover {
@@ -124,18 +131,65 @@ header {
   color: #64B6AC;
 }
 
+#header-index, body header.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 5px;
+}
+
+#header-index #bottom-header, body header.active #bottom-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+}
+
+#header-index #bottom-header ul li a, body header.active #bottom-header ul li a {
+  font-weight: 500;
+  padding: 5px;
+  font-size: 15px;
+  color: #2B3D41;
+}
+
+#header-index #bottom-header ul li a:hover, body header.active #bottom-header ul li a:hover {
+  color: #64B6AC;
+}
+
+#header-index #bottom-header ul :first-child a, body header.active #bottom-header ul :first-child a {
+  color: #64B6AC;
+}
+
+#header-index #bottom-header ul :last-child a, body header.active #bottom-header ul :last-child a {
+  color: #fff;
+}
+
+#header-index #bottom-header ul :last-child a:hover, body header.active #bottom-header ul :last-child a:hover {
+  color: #fff;
+  background-color: #2B3D41;
+}
+
+#header-index #bottom-header #logo span, body header.active #bottom-header #logo span {
+  font-weight: 700;
+}
+
+body header.active {
+  -webkit-box-shadow: 0px 0px 6px 1px #1d292b;
+          box-shadow: 0px 0px 6px 1px #1d292b;
+  background: #fff;
+}
+
 #background-top {
   z-index: 1;
-  height: 700px;
+  height: 800px;
   background-image: url("../img/2.jpg");
   background-size: cover;
-  background-position-y: 20%;
+  background-position-y: 0%;
+  margin-top: -66px;
 }
 
 #background-top #text-top {
   position: relative;
-  top: 230px;
-  left: 8%;
+  top: 45%;
+  left: 5%;
   width: 50%;
 }
 
@@ -146,14 +200,15 @@ header {
 }
 
 #background-top #text-top p {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 #background-top #text-top #p-01 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
-  color: #000000;
+  color: #2B3D41;
+  margin: 3px 0px;
 }
 
 #background-top #text-top #buttons {
@@ -169,7 +224,7 @@ header {
   border-radius: 6px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #background-top #text-top #buttons a:hover {
@@ -189,36 +244,46 @@ header {
   margin: 0px auto;
 }
 
-.half-a-border-on-bottom-light {
-  border-bottom: 3px solid #64B6AC;
-  -o-border-image: linear-gradient(to right, #64B6AC 40%, #2B3D41 40%) 100% 1;
-     border-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #64B6AC), color-stop(40%, #2B3D41)) 100% 1;
-     border-image: linear-gradient(to right, #64B6AC 40%, #2B3D41 40%) 100% 1;
+#whats-psy {
+  text-align: center;
+  margin: 4rem 0px;
 }
 
-.half-a-border-on-bottom-dark {
-  border-bottom: 3px solid #64B6AC;
-  -o-border-image: linear-gradient(to right, #2B3D41 40%, #64B6AC 40%) 100% 1;
-     border-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #2B3D41), color-stop(40%, #64B6AC)) 100% 1;
-     border-image: linear-gradient(to right, #2B3D41 40%, #64B6AC 40%) 100% 1;
+#whats-psy h2 {
+  margin-bottom: 10px;
+}
+
+#whats-psy p {
+  font-size: 20px;
+  width: 65%;
+  line-height: 1.5;
+  margin: 10px auto;
+  letter-spacing: 1.5px;
+}
+
+#whats-psy .emptybottom-border {
+  border-top: 3px solid #2B3D41;
+  width: 20%;
+  margin: 0.25rem auto;
 }
 
 #help {
   margin-top: 0px !important;
+  border: 4px solid #64B6AC;
+  border-radius: 6px;
 }
 
 #help #psychotherapy {
-  font-size: 24px;
-  border-right: 4px solid #2B3D41;
-  padding: 60px;
+  font-size: 20px;
+  padding: 40px;
   color: #fff;
 }
 
 #help #psychotherapy p {
-  width: 80%;
+  width: 95%;
   line-height: 1.15;
   letter-spacing: 1.5px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #help #psychotherapy ul {
@@ -227,48 +292,76 @@ header {
   font-size: 20px;
 }
 
-#help #psychotherapy h3 {
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 20px;
-  margin-top: 50px;
-}
-
 #help #psychotherapy #benefits p {
-  margin-left: 10px;
   font-size: 20px;
 }
 
-#help #can-help-with {
-  padding: 60px;
+#help #about {
+  padding: 40px;
 }
 
-#help #can-help-with p {
-  font-size: 24px;
+#help #about #about-img {
+  width: 250px;
+  height: 250px;
+  background-image: url("../img/1.jpg");
+  background-size: 450px;
+  background-position: 30% 30%;
+  border-radius: 50%;
+  border: 1.5px solid #2B3D41;
+  margin: 0px auto;
+}
+
+#help #about #about-text {
+  font-size: 18px;
+}
+
+#help #about #about-text #aboutfirst-p {
+  margin: 0px auto;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+#help #about #about-text ul {
+  margin-top: 2rem;
+  padding: 0px;
+  width: 85%;
+  line-height: 1.1;
+}
+
+#can-help-with {
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+#can-help-with p {
+  font-size: 18px;
   width: 100%;
   margin: 0px auto;
   line-height: 1.5;
   letter-spacing: 2px;
   color: #fff;
-  margin-top: 60px;
 }
 
-#help #can-help-with .help-with {
+#can-help-with .help-with {
   width: 300px;
-  height: 250px;
+  min-height: 250px;
   background-color: #64B6AC;
   padding: 20px;
+  text-align: center;
+  margin: 0px auto;
+  border-radius: 6px;
 }
 
-#help #can-help-with .help-with h3 {
+#can-help-with .help-with h3 {
   margin-top: 10px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 21px;
   text-transform: uppercase;
 }
 
-#help #can-help-with .help-with #icon-help {
+#can-help-with .help-with #icon-help {
   font-size: 70px;
   width: 100px;
   height: 100px;
@@ -287,59 +380,21 @@ header {
   border: 5px solid #2B3D41;
 }
 
-#help #can-help-with .help-with #icon-help .iconify {
+#can-help-with .help-with #icon-help .iconify {
   color: #64B6AC;
 }
 
-#help #can-help-with .help-with p {
+#can-help-with .help-with p {
   font-size: 14px;
   color: #2B3D41;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
-#help #can-help-with .row {
+#can-help-with .row {
   margin: 0px auto;
   margin-top: 20px;
-  width: 80%;
-}
-
-#help #can-help-with #first-row-help {
-  margin-top: 60px;
-}
-
-#about #about-block {
-  -webkit-box-shadow: 0px 1px 5px 1px #2B3D41;
-          box-shadow: 0px 1px 5px 1px #2B3D41;
-}
-
-#about #about-block ul {
-  list-style-type: disc;
-  margin-top: -10px;
-}
-
-#about #about-block ul li {
-  font-size: 18px;
-}
-
-#about h2 {
-  color: #2B3D41;
-}
-
-#about p {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-#about #slika {
-  height: 620px;
-  background-image: url("../img/1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#about #button-about a {
-  color: #2B3D41;
+  width: 100%;
 }
 
 .button-service {
@@ -348,13 +403,13 @@ header {
 
 .button-service a {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 19px;
   border-radius: 6px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  padding: 7px 25px;
-  background-color: transparent;
-  color: #2B3D41;
+  padding: 5px 18px;
+  background-color: #2B3D41;
+  color: #fff;
   border: 1.5px solid #2B3D41;
 }
 
@@ -375,6 +430,8 @@ header {
 
 #services .card {
   width: 18rem;
+  border-color: #2B3D41;
+  border-radius: 6px;
 }
 
 #services .card img {
@@ -382,35 +439,16 @@ header {
 }
 
 #services .card .btn {
-  border: 0px;
+  border: 1px solid #2B3D41;
   border-radius: 6px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  background-color: #fff;
+  color: #2B3D41;
 }
 
 #services .card .btn:hover {
-  background-color: #64B6AC;
-}
-
-#app {
-  height: 300px;
-  margin-top: 0px !important;
-  background-size: cover;
-  background-position-y: 30%;
-  padding: 0px;
-  background-image: url("../img/bg4.jpg");
-}
-
-#app .overlay-shadow {
-  background: rgba(0, 0, 0, 0.35);
-  width: 100%;
-  height: 100%;
-}
-
-#app p {
-  font-size: 26px;
-  font-weight: 500;
-  font-style: italic;
+  background-color: #2B3D41;
   color: #fff;
 }
 
@@ -422,6 +460,7 @@ header {
 
 #testimonials {
   padding: 0px;
+  background-color: #2B3D41;
 }
 
 #testimonials h2 {
@@ -471,7 +510,7 @@ header {
 }
 
 footer {
-  margin-top: 200px;
+  margin-top: 140px;
   padding: 20px;
   padding-top: 50px;
   background-color: #2B3D41;
@@ -565,29 +604,68 @@ footer #footer-app p {
   color: #64B6AC;
 }
 
-#contact-page form {
+#contact-background, #fees-background {
+  height: auto;
+  background-image: url("../img/services-pages/background-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+}
+
+#contact-background #contact-shadow, #fees-background #contact-shadow {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#contact-background #contact-shadow .container, #fees-background #contact-shadow .container {
+  width: 60%;
+  position: relative;
+}
+
+#contact-background #contact-shadow .container #contact-form, #fees-background #contact-shadow .container #contact-form {
+  background-color: #fff;
+  padding: 60px;
+  border: 6px solid #64B6AC;
+}
+
+#contact-background #contact-shadow .container #contact-form span, #fees-background #contact-shadow .container #contact-form span {
+  font-weight: 500;
+}
+
+#contact-background #contact-shadow .container #contact-form .btn, #fees-background #contact-shadow .container #contact-form .btn {
+  background-color: #64B6AC;
+  border-color: #64B6AC;
+}
+
+#contact-background #contact-shadow .container #contact-form .btn:hover, #fees-background #contact-shadow .container #contact-form .btn:hover {
   background-color: #2B3D41;
-  padding: 20px;
-  color: #fff;
+  border-color: #2B3D41;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
-#contact-info {
-  margin-top: 100px;
+#contact-background #contact-shadow .container #contact-form p, #contact-background #contact-shadow .container #contact-form a, #fees-background #contact-shadow .container #contact-form p, #fees-background #contact-shadow .container #contact-form a {
+  line-height: 1.5;
+  font-size: 18px;
 }
 
-#contact-info .icon-contact {
-  font-size: 45px;
+#contact-background #contact-shadow .container #contact-form a, #fees-background #contact-shadow .container #contact-form a {
   color: #2B3D41;
 }
 
-#contact-info p {
-  font-size: 18px;
-  line-height: 1.5;
+#contact-background #contact-shadow .container #contact-form form #blog-update-list, #fees-background #contact-shadow .container #contact-form form #blog-update-list {
+  padding-left: 0px;
 }
 
-#contact-info p span {
-  font-size: 21px;
-  font-weight: 500;
+#contact-background #contact-shadow .container #contact-form form .form-check .form-check-input, #fees-background #contact-shadow .container #contact-form form .form-check .form-check-input {
+  padding: 0px;
+  margin: 0px 5px;
+}
+
+#contact-page-01 footer, #fees-page footer {
+  margin-top: 0px;
 }
 
 /*Services*/
@@ -635,12 +713,181 @@ footer #footer-app p {
   min-height: 200px;
 }
 
+.services-desc {
+  color: #fff;
+  text-align: center;
+}
+
+.services-desc .bv-col-service {
+  height: 600px;
+}
+
+.services-desc h4 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+}
+
+.services-desc p {
+  width: 80%;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+}
+
+.services-desc a {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: #2B3D41;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.services-desc a:hover {
+  background-color: #64B6AC;
+  color: #fff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.services-desc #desc-img01, .services-desc #desc-img02, .services-desc #desc-img03, .services-desc #desc-img04 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/services-pages/couple.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.services-desc #desc-img02 {
+  background-image: url("../img/services-pages/group.jpg");
+}
+
+.services-desc #desc-img03 {
+  background-image: url("../img/services-pages/individual.jpg");
+}
+
+.services-desc #desc-img04 {
+  background-image: url("../img/services-pages/child-therapy.jpg");
+}
+
+#couple-page, #group-page {
+  background-color: #E5EEEB;
+}
+
+.service-desc-textbox {
+  margin-top: 40px;
+  width: 70%;
+  margin: 40px auto;
+  border-left: 3px solid #64B6AC;
+  padding-left: 20px;
+}
+
+.service-desc-textbox h4 {
+  font-weight: 700;
+  color: #64B6AC;
+  text-transform: capitalize;
+}
+
+.service-desc-textbox p {
+  font-size: 19px;
+  line-height: 1.5;
+  font-family: 'Merriweather', serif;
+}
+
+.service-desc-textbox ul {
+  list-style-type: square;
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+.service-desc-textbox ul li {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.service-desc-textbox ul span {
+  font-weight: bold;
+}
+
+.last-child-servdesc {
+  border-left: 0px;
+  padding-left: 0px;
+}
+
+.last-child-servdesc h4 {
+  color: #000000;
+}
+
 .cleaner {
   clear: both;
 }
 
 .cleaner {
   display: none;
+}
+
+/*Fees*/
+#fees-page #contact-background #contact-shadow {
+  padding-bottom: 0px;
+}
+
+#fees-box {
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #fff;
+  border: 6px solid #64B6AC;
+}
+
+#fees-box #fees-text {
+  text-align: center;
+}
+
+#fees-box #fees-text :first-child {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 0px;
+  color: #2B3D41;
+}
+
+#fees-box #fees-text p {
+  font-size: 28px;
+  margin-top: 5px;
+  letter-spacing: 3px;
+  line-height: 1;
+  color: #64B6AC;
+}
+
+#fees-box #fees-text :last-child {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  color: #2B3D41;
+  width: 80%;
+  margin: 0px auto;
+}
+
+#fees-box table {
+  width: 60%;
+  margin: 40px auto;
+  border: 1px solid #2B3D41;
+  font-size: 18px;
+}
+
+#fees-box table td {
+  padding: 10px;
+  border-bottom: 1px solid #2B3D41;
+  border-left: 1px solid #2B3D41;
+}
+
+#fees-box table th {
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+  background-color: #2B3D41;
+  color: #fff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -692,4 +939,3 @@ footer #footer-app p {
     padding-left: 16px;
   }
 }
-/*# sourceMappingURL=style.css.map */
