@@ -470,6 +470,16 @@ body header.active {
   padding-top: 20px;
 }
 
+#testimonials .carousel-control-prev-icon, #testimonials .carousel-control-next-icon {
+  background-image: none;
+}
+
+#testimonials .arrow-entity {
+  font-size: 45px;
+  -webkit-transform: scale(1, 1.2);
+          transform: scale(1, 1.2);
+}
+
 #testimonials .carousel-item {
   width: 100%;
   height: 400px;
