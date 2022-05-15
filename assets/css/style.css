@@ -499,14 +499,34 @@ body header.active {
   background-image: url("../img/test4.jpg");
 }
 
-#guest h2 {
-  color: #2B3D41;
-  text-align: center;
-  margin-top: 40px;
+#blog-homepage #blog-homepage-img, #blog-homepage #blog-homepage-img2 {
+  height: 330px;
+  background-image: url("../img/blog1.jpg");
+  background-size: cover;
 }
 
-#guest .row {
-  margin-top: 20px;
+#blog-homepage #blog-homepage-img2 {
+  background-image: url("../img/blog2.jpg");
+}
+
+#blog-homepage .blog-homepage-text {
+  border-left: 0;
+  padding: 20px;
+}
+
+#blog-homepage .blog-homepage-text a {
+  color: #64B6AC;
+}
+
+#blog-homepage .blog-homepage-text p {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+#blog-homepage .blog-box {
+  border-radius: 6px;
+  border: 2px solid #64B6AC;
+  border-left: 13px solid #64B6AC;
 }
 
 footer {
