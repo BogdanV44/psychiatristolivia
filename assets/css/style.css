@@ -430,8 +430,9 @@ body header.active {
 
 #services .card {
   width: 18rem;
-  border-color: #2B3D41;
-  border-radius: 6px;
+  border: 0;
+  -webkit-box-shadow: 2px 2px 7px 0px #2B3D41;
+          box-shadow: 2px 2px 7px 0px #2B3D41;
 }
 
 #services .card img {
@@ -451,7 +452,6 @@ body header.active {
   background-color: #2B3D41;
   color: #fff;
 }
-
 /*Slider*/
 .bv-container {
   width: 100%;
