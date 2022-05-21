@@ -3,6 +3,17 @@
   padding: 0px;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: #fff;
+  background: #64B6AC;
+}
+
 ul {
   list-style-type: none;
 }
@@ -956,7 +967,17 @@ footer #footer-app p {
 .hamburger {
   display: none;
   cursor: pointer;
-  text-align: end;
+  padding-top: 2px;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px 0px 4px 100px;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+  background-color: #2B3D41;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -1131,20 +1152,23 @@ footer #footer-app p {
     background-color: #fff;
     color: #2B3D41;
   }
-   button {
-    width: 40%;
-    height: 80%;
-    background-color: #fff;
-    border: 0;
-  }
   .hamburger {
     display: block;
     font-size: 20px;
     margin-top: 5px;
   }
-  .hamburger.active svg {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(6px) rotate(45deg);
+            transform: translateY(6px) rotate(45deg);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+            transform: translateY(-6px) rotate(-45deg);
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -1261,6 +1285,9 @@ footer #footer-app p {
   }
   #can-help-with .container-lg {
     padding: 0px;
+  }
+  #can-help-with .container-lg .row {
+    margin-bottom: 20px;
   }
   #can-help-with .container-lg p {
     font-size: 12px;
