@@ -5,8 +5,8 @@
 
 ::-moz-selection {
   /* Code for Firefox */
-  color: red;
-  background: yellow;
+  color: #fff;
+  background: #64B6AC;
 }
 
 ::selection {
