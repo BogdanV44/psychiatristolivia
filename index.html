@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -21,20 +22,23 @@
 <body>
     <header id="header-index">
         <div class="container-fluid py-2" id="bottom-header">
-            <div class="container">
+            <div class="container-md">
                 <div class="row">
-                    <div class="col-4" id="logo">
+                    <div class="col-lg-4 col-sm-4 col-7" id="logo">
                         <a href="#"><span>Dr Olivia June</span><br/>Psychiatrist</a>
                     </div>
-                    <div class="col-8">
-                        <ul class="d-flex justify-content-end text-uppercase">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="pages/services.html">Services</a></li>
-                            <li><a href="pages/fees.html">Fees</a></li>
-                            <li><a target="_blank" href="https://bogdanv44.github.io/portfolio/">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="pages/contact.html">Contact</a></li>
+                    <div class="col-lg-8 col-sm-8 col-5">
+                        <ul class="d-flex justify-content-end text-uppercase nav-menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/fees.html">Fees</a></li>
+                            <li class="nav-item"><a class="nav-link" target="_blank" href="https://bogdanv44.github.io/portfolio/">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
                         </ul>
+                        <div class="hamburger">
+                            <span class="iconify" data-icon="icon-park-outline:hamburger-button"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,9 +52,9 @@
                 <p>Become a person that you wish you are</p>
                 <div id="buttons">
                     <div class="row">
-                        <div class="col-12 d-flex text-capitalize justify-content-around">
+                        <div class="col-12 d-flex text-capitalize">
                             <a href="#">Fix an appointment</a>
-                            <a href="#" id="a-01">View services</a>
+                            <a href="#" id="a-01">View services</a> 
                         </div>
                     </div>
                 </div>
@@ -66,10 +70,10 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="container mt-5" id="help">
+            <div class="container-md mt-5" id="help">
                 <div class="row">
-                    <div class="col-5 bv-bg-lightblue" id="psychotherapy">
-                        <div class="container">
+                    <div class="col-lg-5 col-md-12 bv-bg-lightblue" id="psychotherapy">
+                        <div class="container-md">
                             <h2 class="h2-white">Benefits</h2>
                             <div class="row">
                                 <div class="col-12" id="benefits">
@@ -96,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-7" id="about">
+                    <div class="col-lg-7 col-md-12" id="about">
                         <h2 class="text-center text-uppercase">Who am I?</h2>
                         <div id="about-img"></div>
                         <div id="about-text">
@@ -119,39 +123,39 @@
             </div>
         </div>
         <div class="container-fluid mt-5 bv-bg-blue">
-            <div class="container">
+            <div class="container-lg">
                 <div class="text-center" id="can-help-with">
-                    <div class="container mt-3">
+                    <div class="container-lg mt-3">
                         <h2 class="h2-white">I can help you to</h2>
                         <p>With both my education, but more importantly, experience and your dedication we will
                         find the root of the problem and rewire your brain to change your behaviour.</p>
                         <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="col-lg-3 col-md-6 col-6 d-flex">
                                 <div class="help-with">
-                                    <div id="icon-help"><span class="iconify" data-icon="mdi:cigar"></span></div>
+                                    <div id="icon-help"><span class="iconify" data-icon="mdi:cigar" data-width="50" data-height="50"></span></div>
                                     <h3>Stop Smoking</h3>
                                     <p>Quit smoking permanently with my service</p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="col-lg-3 col-md-6 col-6 d-flex">
                                 <div class="help-with">
-                                    <div id="icon-help"><span class="iconify" data-icon="fa6-solid:weight-scale"></span></div>
+                                    <div id="icon-help"><span class="iconify" data-icon="fa6-solid:weight-scale" data-width="40" data-height="40"></span></div>
                                     <h3>Lose weight</h3>
                                     <p>See how we can help you change your eating habits</p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="col-lg-3 col-md-6 col-6 d-flex">
                                 <div class="help-with">
                                 <div id="icon-help"><span class="iconify" data-icon="mdi:head-cog"></span></div>
-                                    <h3>Anxiety & Worry</h3>
+                                    <h3>Anxiety</h3>
                                     <p>Stop procrastinating and boost self-confidence today.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="col-lg-3 col-md-6 col-6 d-flex">
                                 <div class="help-with">
-                                    <div id="icon-help"><span class="iconify" data-icon="ps:guy-happy"></span></div>
+                                    <div id="icon-help"><span class="iconify" data-icon="ps:guy-happy" data-width="45" data-height="45"></span></div>
                                     <h3>Healthy mind</h3>
-                                    <p>Make you have a better life overall.</p>
+                                    <p>Let's learn what's stopping you in your daily life, and solve it.</p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +165,7 @@
         </div>
         <div class="container" id="services">
             <h2 class="mt-5">Services</h2>
-            <row class="row d-flex justify-content-between text-center">
+            <div class="row d-flex justify-content-between text-center">
                 <div class="col-xl-3 col-md-6 col-sm-12 mt-2">
                     <div class="card mx-auto">
                         <img src="assets/img/ser1.jpg" class="card-img-top" alt="couple" />
@@ -204,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-            </row>
+            </div>
             <div class="button-service text-center">
                 <a href="pages/services.html">Conditions i treat</a>
             </div>
@@ -221,7 +225,7 @@
                   <div class="carousel-item active">
                     <div class="slika-slider">
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <h5>Marrie</h5>
                       <p>"It's been about 6 weeks since our final session,
                         and I still feel way more connected than isolated.
@@ -233,7 +237,7 @@
                   <div class="carousel-item">
                     <div class="slika-slider" id="test2">
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <h5>Joseph</h5>
                       <p>"Olivia is a compassionate and skilled leader.
                         She offers multiple tools for helping navigate 
@@ -245,10 +249,10 @@
                   <div class="carousel-item">
                     <div class="slika-slider" id="test3">
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                       <h5>Nicholas</h5>
                       <p>"My entire mindset {has shifted}. I know that sounds dramatic but it's true.
-                        It has changed the way I see myself as well as the world as a whole." </p>
+                        It has changed the way I see myself as well as the world as a whole. My problems slowly faded away, until they stopped being problems anymore." </p>
                     </div>
                   </div>
                 </div>
@@ -263,59 +267,57 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>C
-        <div class="container-fluid">
-            <div class="container" id="blog-homepage">
-                <div class="wrapper">
-                    <h2 class="text-center mt-3">Blog</h2>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row blog-box">
-                                <div class="col-6" id="blog-homepage-img"></div>
-                                <div class="col-6 blog-homepage-text d-flex flex-column">
-                                    <h3>Mental Health Awareness Week</h3>
-                                    <p>If we've learnt anything from the last two years, it 
-                                    would likely be the fragility of our minds, and how 
-                                    major life changes or unexpected situations can sometimes 
-                                    send our mental wellbeing into a negative spiral.
-                                    Suffering from mental health issues is<a href="#">...[Read More]</a></p>
-                                    <div class="row d-flex flex-row mt-auto">
-                                        <div class="col-3">
-                                            <p>13.5.2022</p>
-                                        </div>
-                                        <div class="col-9 d-flex flex-row-reverse">
-                                            <p><a href="#"><span class="iconify ms-3 me-1 mb-1" data-icon="fa:comments-o"></span>22</a></p>
-                                            <p><span class="iconify me-1 mb-1" data-icon="ant-design:like-outlined"></span>1244</p>
-                                        </div>
+        </div>
+        <div class="container-fluid" id="blog-homepage">
+            <div class="wrapper">
+                <h2 class="text-center mt-3">Blog</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row blog-box">
+                            <div class="col-lg-6 col-md-6 col-12" id="blog-homepage-img"></div>
+                            <div class="col-lg-6 col-md-6 col-12 blog-homepage-text d-flex flex-column">
+                                <h3>Mental Health Awareness Week</h3>
+                                <p>If we've learnt anything from the last two years, it 
+                                would likely be the fragility of our minds, and how 
+                                major life changes or unexpected situations can sometimes 
+                                send our mental wellbeing into a negative spiral.
+                                Suffering from mental health issues is<a href="#">...[Read More]</a></p>
+                                <div class="row d-flex flex-row mt-auto">
+                                    <div class="col-3">
+                                        <p>13.5.2022</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="row mt-3 blog-box">
-                                <div class="col-6" id="blog-homepage-img2"></div>
-                                <div class="col-6 blog-homepage-text d-flex flex-column">
-                                    <h3>Wired To Be Social: The Value Of Community</h3>
-                                    <p>If there's one thing COVID-19 has taught us, it's that humans have a 
-                                    fundamental need to feel connected. Even the most introverted amongst us 
-                                    found ourselves yearning 
-                                    for a friendly face at the petrol pump, or a smile from a<a href="#">...[Read More]</a></p>
-                                    <div class="row d-flex flex-row mt-auto">
-                                        <div class="col-3">
-                                            <p>10.5.2022</p>
-                                        </div>
-                                        <div class="col-9 d-flex flex-row-reverse">
-                                            <p><a href="#"><span class="iconify ms-3 me-1 mb-1" data-icon="fa:comments-o"></span>17</a></p>
-                                            <p><span class="iconify me-1 mb-1" data-icon="ant-design:like-outlined"></span>1421</p>
-                                        </div>
+                                    <div class="col-9 d-flex flex-row-reverse">
+                                        <p><a href="#"><span class="iconify ms-3 me-1 mb-1" data-icon="fa:comments-o"></span>22</a></p>
+                                        <p><span class="iconify me-1 mb-1" data-icon="ant-design:like-outlined"></span>1244</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="button-service text-center">
-                        <a href="pages/services.html">Read More</a>
+                    <div class="col-12">
+                        <div class="row mt-3 blog-box">
+                            <div class="col-lg-6 col-md-6 col-12" id="blog-homepage-img2"></div>
+                            <div class="col-lg-6 col-md-6 col-12 blog-homepage-text d-flex flex-column">
+                                <h3>Wired To Be Social: The Value Of Community</h3>
+                                <p>If there's one thing COVID-19 has taught us, it's that humans have a 
+                                fundamental need to feel connected. Even the most introverted amongst us 
+                                found ourselves yearning 
+                                for a friendly face at the petrol pump, or a smile from a<a href="#">...[Read More]</a></p>
+                                <div class="row d-flex flex-row mt-auto">
+                                    <div class="col-3">
+                                        <p>10.5.2022</p>
+                                    </div>
+                                    <div class="col-9 d-flex flex-row-reverse">
+                                        <p><a href="#"><span class="iconify ms-3 me-1 mb-1" data-icon="fa:comments-o"></span>17</a></p>
+                                        <p><span class="iconify me-1 mb-1" data-icon="ant-design:like-outlined"></span>1421</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="button-service text-center">
+                    <a href="pages/services.html">Read More</a>
                 </div>
             </div>
         </div>
@@ -354,7 +356,7 @@
                     <div class="col-12" id="footer-app">
                         <a href="pages/contact.html">Book an Appointment</a>
                     </div>
-                    <div class="col-12 text-capitalize">Copyright by Visoka ICT | all rights reserved</div>
+                    <div class="col-12"><p>&copy; Copyright by Bogdan Vujnovic</p></div>
                 </div>
             </div>
         </footer>
