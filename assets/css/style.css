@@ -119,6 +119,7 @@ header {
 
 #bottom-header ul :last-child a:hover {
   background-color: #2B3D41;
+  color: #fff;
 }
 
 #bottom-header ul li a {
@@ -214,6 +215,11 @@ body header.active {
 #background-top #text-top #buttons {
   width: 450px;
   margin: 50px auto;
+}
+
+#background-top #text-top #buttons .col-12 {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #background-top #text-top #buttons a {
@@ -452,6 +458,7 @@ body header.active {
   background-color: #2B3D41;
   color: #fff;
 }
+
 /*Slider*/
 .bv-container {
   width: 100%;
@@ -509,6 +516,10 @@ body header.active {
   background-image: url("../img/test4.jpg");
 }
 
+#blog-homepage .wrapper {
+  width: 65%;
+}
+
 #blog-homepage #blog-homepage-img, #blog-homepage #blog-homepage-img2 {
   height: 330px;
   background-image: url("../img/blog1.jpg");
@@ -540,7 +551,7 @@ body header.active {
 }
 
 footer {
-  margin-top: 140px;
+  margin-top: 120px;
   padding: 20px;
   padding-top: 50px;
   background-color: #2B3D41;
@@ -619,6 +630,24 @@ footer #footer-app a:hover {
 footer #footer-app p {
   font-size: 24px;
   letter-spacing: 2px;
+}
+
+/*Blog*/
+#coming-soon {
+  text-align: center;
+  color: #64B6AC;
+  border: 3px solid #64B6AC;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 100px auto;
+  margin-bottom: 400px;
+}
+
+#coming-soon #coming-soontxt h1 {
+  margin-bottom: 0rem;
+  font-size: 60px;
 }
 
 /*Contact*/
@@ -860,6 +889,10 @@ footer #footer-app p {
 }
 
 /*Fees*/
+#fees-page #fees-background {
+  height: 90%;
+}
+
 #fees-page #contact-background #contact-shadow {
   padding-bottom: 0px;
 }
@@ -920,25 +953,98 @@ footer #footer-app p {
   color: #fff;
 }
 
-@media only screen and (max-width: 1200px) {
+.hamburger {
+  display: none;
+  cursor: pointer;
+  text-align: end;
+}
+
+@media only screen and (max-width: 1400px) {
+  #services {
+    width: 100%;
+  }
   #services .card {
-    width: 24rem;
+    width: 17rem;
+  }
+  #services .card .card-text {
+    min-height: 85px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #header-index ul li a, body header.active ul li a {
+    margin-left: 20px;
+  }
+  #help #psychotherapy {
+    padding: 15px;
+  }
+  #help #psychotherapy #benefits p {
+    font-size: 16px;
+  }
+  #help #psychotherapy #benefits ul {
+    font-size: 16px;
+  }
+  #help #psychotherapy p {
+    font-size: 16px;
+  }
+  #help #about {
+    padding: 15px;
+  }
+  #help #about #about-img {
+    width: 200px;
+    height: 200px;
+  }
+  #help #about #about-text {
+    font-size: 16px;
+  }
+  #services .card {
+    width: 21rem;
+    margin-top: 20px;
   }
   #services .card img {
-    min-height: 270px;
+    max-height: 220px;
+    min-height: 225px;
   }
   #services .col-md-6 {
     padding: 0px;
     margin-top: 20px;
   }
+  #blog-homepage .wrapper {
+    width: 90%;
+  }
+  #blog-homepage #blog-homepage-img, #blog-homepage #blog-homepage-img2 {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-  #services .card {
-    width: 20rem;
+  #background-top #text-top {
+    width: 70%;
+    top: 35%;
   }
-  #services .card img {
-    min-height: 220px;
+  #background-top #text-top #p-01 {
+    font-size: 35px;
+  }
+  #background-top #text-top p {
+    font-size: 20px;
+  }
+  #background-top #text-top #buttons {
+    width: auto;
+    margin: 20px auto;
+  }
+  #background-top #text-top #buttons .row {
+    padding-right: 20px;
+  }
+  #background-top #text-top #buttons .row .col-12 {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #background-top #text-top #buttons .row .col-12 a {
+    margin-left: 15px;
+  }
+  #can-help-with .help-with {
+    margin-top: 20px;
   }
   #conditions .cleaner {
     display: block;
@@ -968,4 +1074,250 @@ footer #footer-app p {
   footer ul li a {
     padding-left: 16px;
   }
+  footer #footer-text-first #first-child-p {
+    font-size: 20px;
+  }
+  footer #footer-text-first p {
+    font-size: 13px;
+  }
+  footer #footer-text-first p span {
+    font-size: 11px;
+    font-weight: 700;
+  }
+  footer #footer-text h4 {
+    font-size: 16px;
+  }
+  footer #footer-text .list-group li a {
+    font-size: 14px;
+  }
+  footer #footer-app a {
+    padding: 8px 20px;
+    font-size: 14px;
+    background-color: #fff;
+    border-color: #fff;
+    color: #2B3D41;
+  }
+  footer #footer-app a:hover {
+    background-color: #64B6AC;
+    border-color: #64B6AC;
+    color: #fff;
+  }
+  footer .row .col-12 p {
+    font-size: 12px;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  #header-index, body header.active {
+    background-color: #fff;
+  }
+  #header-index #logo a, body header.active #logo a {
+    font-size: 14px;
+  }
+  #header-index #logo a span, body header.active #logo a span {
+    font-size: 18px;
+  }
+  #header-index #bottom-header ul, body header.active #bottom-header ul {
+    padding-left: 0px;
+    margin-top: 0;
+  }
+  #header-index #bottom-header ul a, body header.active #bottom-header ul a {
+    margin-left: 0px;
+  }
+  #header-index #bottom-header ul li, body header.active #bottom-header ul li {
+    margin: 4px;
+  }
+  #header-index #bottom-header ul :last-child a, body header.active #bottom-header ul :last-child a {
+    background-color: #fff;
+    color: #2B3D41;
+  }
+  .hamburger {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .hamburger.active svg {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-menu {
+    width: 100%;
+    position: fixed;
+    right: -100%;
+    top: 60px;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-menu .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  #background-top {
+    background-position-x: 20%;
+  }
+  #whats-psy p {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  h2 {
+    font-size: 20px;
+  }
+  #background-top {
+    height: 550px;
+    background-position-x: 37%;
+  }
+  #background-top #text-top {
+    width: 90%;
+    top: 35%;
+    left: 3%;
+  }
+  #background-top #text-top p, #background-top #text-top h1, #background-top #text-top #buttons a {
+    font-size: 16px;
+    text-align: left;
+  }
+  #background-top #text-top p {
+    width: 80%;
+  }
+  #background-top #text-top h1 {
+    font-size: 12px;
+  }
+  #background-top #text-top #p-01 {
+    font-size: 30px;
+  }
+  #background-top #text-top #buttons .row .col-12 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0px;
+  }
+  #background-top #text-top #buttons .row .col-12 a {
+    font-size: 14px;
+    padding: 8px;
+    margin-left: 10px;
+  }
+  #whats-psy p {
+    font-size: 13px;
+    width: 100%;
+  }
+  #help {
+    border: 2px solid #64B6AC;
+  }
+  #help #psychotherapy {
+    padding: 20px 0px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #help #psychotherapy h2 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  #help #psychotherapy .col-12 p {
+    font-size: 13px;
+  }
+  #help #psychotherapy #benefits p {
+    font-size: 13px;
+  }
+  #help #psychotherapy #benefits ul {
+    font-size: 13px;
+  }
+  #help #about {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #help #about #about-img {
+    height: 180px;
+    width: 180px;
+  }
+  #help #about #about-text, #help #about #about-text #aboutfirst-p {
+    font-size: 15px;
+  }
+  #help #about #about-text ul, #help #about #about-text #aboutfirst-p ul {
+    font-size: 13px;
+  }
+  #can-help-with {
+    padding: 20px 0px;
+  }
+  #can-help-with .container-lg {
+    padding: 0px;
+  }
+  #can-help-with .container-lg p {
+    font-size: 12px;
+  }
+  #can-help-with .container-lg .help-with {
+    padding: 5px;
+    max-height: 200px;
+    width: 100%;
+    min-height: 180px;
+  }
+  #can-help-with .container-lg .help-with #icon-help {
+    width: 65px;
+    height: 65px;
+  }
+  #can-help-with .container-lg .help-with h3 {
+    font-size: 16px;
+    width: 100%;
+  }
+  #can-help-with .container-lg .help-with p {
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+  #services .row .card {
+    width: 15rem;
+  }
+  #services .row .card img {
+    height: 170px;
+    min-height: 100px;
+  }
+  #services .row .card .card-body h5 {
+    font-size: 16px;
+  }
+  #services .row .card .card-body p {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+  #services .row .card .card-body a {
+    font-size: 13px;
+  }
+  #services .button-service a {
+    font-size: 16px;
+  }
+  #testimonials .carousel-item {
+    height: 460px;
+  }
+  #blog-homepage .wrapper {
+    width: 80%;
+  }
+  #blog-homepage .blog-box {
+    border-left: 2.5px solid #64B6AC;
+    border-top: 7px solid #64B6AC;
+  }
+  #blog-homepage .blog-box #blog-homepage-img, #blog-homepage .blog-box #blog-homepage-img2 {
+    min-height: 200px;
+  }
+  #blog-homepage .blog-box .blog-homepage-text {
+    padding: 15px;
+  }
+  #blog-homepage .blog-box .blog-homepage-text h3 {
+    font-size: 16px;
+  }
+  #blog-homepage .blog-box .blog-homepage-text p {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
