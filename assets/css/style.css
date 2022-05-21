@@ -1131,6 +1131,12 @@ footer #footer-app p {
     background-color: #fff;
     color: #2B3D41;
   }
+   button {
+    width: 40%;
+    height: 80%;
+    background-color: #fff;
+    border: 0;
+  }
   .hamburger {
     display: block;
     font-size: 20px;
