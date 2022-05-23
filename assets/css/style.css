@@ -96,7 +96,7 @@ header {
   font-size: 18px;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 }
 
 #bottom-header #logo a span {
@@ -109,11 +109,7 @@ header {
 
 #bottom-header ul {
   margin-bottom: 0px;
-  margin-top: 14px;
-}
-
-#bottom-header ul :first-child a {
-  color: #64B6AC;
+  margin-top: 5px;
 }
 
 #bottom-header ul :last-child a {
@@ -123,7 +119,8 @@ header {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
+  margin-top: 4px;
   margin-left: 40px;
   font-weight: 500;
 }
@@ -166,12 +163,18 @@ header {
   color: #64B6AC;
 }
 
+#header-index #bottom-header ul, body header.active #bottom-header ul {
+  margin-top: 8.5px;
+}
+
 #header-index #bottom-header ul :first-child a, body header.active #bottom-header ul :first-child a {
   color: #64B6AC;
 }
 
 #header-index #bottom-header ul :last-child a, body header.active #bottom-header ul :last-child a {
   color: #fff;
+  margin-top: 0px;
+  margin-left: 60px;
 }
 
 #header-index #bottom-header ul :last-child a:hover, body header.active #bottom-header ul :last-child a:hover {
@@ -436,27 +439,27 @@ body header.active {
   color: #fff;
 }
 
-#services {
+.services {
   margin-bottom: 80px;
 }
 
-#services h2 {
+.services h2 {
   color: #2B3D41;
   text-align: center;
 }
 
-#services .card {
+.services .card {
   width: 18rem;
   border: 0;
   -webkit-box-shadow: 2px 2px 7px 0px #2B3D41;
           box-shadow: 2px 2px 7px 0px #2B3D41;
 }
 
-#services .card img {
+.services .card img {
   min-height: 200px;
 }
 
-#services .card .btn {
+.services .card .btn {
   border: 1px solid #2B3D41;
   border-radius: 6px;
   -webkit-transition: 0.2s;
@@ -465,7 +468,7 @@ body header.active {
   color: #2B3D41;
 }
 
-#services .card .btn:hover {
+.services .card .btn:hover {
   background-color: #2B3D41;
   color: #fff;
 }
@@ -769,6 +772,10 @@ footer #footer-app p {
   letter-spacing: 2px;
 }
 
+#conditions .card {
+  width: 22rem;
+}
+
 #services-page h5 {
   font-size: 18px;
 }
@@ -974,20 +981,20 @@ footer #footer-app p {
   display: block;
   width: 20px;
   height: 2px;
-  margin: 4px 0px 4px 100px;
+  margin: 4px 0px 4px 85%;
   -webkit-transition: all 0.3 ease-in-out;
   transition: all 0.3 ease-in-out;
   background-color: #2B3D41;
 }
 
 @media only screen and (max-width: 1400px) {
-  #services {
+  .services {
     width: 100%;
   }
-  #services .card {
+  .services .card {
     width: 17rem;
   }
-  #services .card .card-text {
+  .services .card .card-text {
     min-height: 85px;
   }
 }
@@ -1018,15 +1025,15 @@ footer #footer-app p {
   #help #about #about-text {
     font-size: 16px;
   }
-  #services .card {
+  .services .card {
     width: 21rem;
     margin-top: 20px;
   }
-  #services .card img {
+  .services .card img {
     max-height: 220px;
     min-height: 225px;
   }
-  #services .col-md-6 {
+  .services .col-md-6 {
     padding: 0px;
     margin-top: 20px;
   }
@@ -1129,26 +1136,32 @@ footer #footer-app p {
 }
 
 @media only screen and (max-width: 768px) {
-  #header-index, body header.active {
+  #header-index, body header.active, header {
     background-color: #fff;
   }
-  #header-index #logo a, body header.active #logo a {
+  #header-index #top-header .row a, body header.active #top-header .row a, header #top-header .row a {
+    font-size: 12px;
+  }
+  #header-index #top-header .row a svg, body header.active #top-header .row a svg, header #top-header .row a svg {
+    font-size: 15px;
+  }
+  #header-index #bottom-header #logo a, body header.active #bottom-header #logo a, header #bottom-header #logo a {
     font-size: 14px;
   }
-  #header-index #logo a span, body header.active #logo a span {
+  #header-index #bottom-header #logo a span, body header.active #bottom-header #logo a span, header #bottom-header #logo a span {
     font-size: 18px;
   }
-  #header-index #bottom-header ul, body header.active #bottom-header ul {
+  #header-index #bottom-header ul, body header.active #bottom-header ul, header #bottom-header ul {
     padding-left: 0px;
     margin-top: 0;
   }
-  #header-index #bottom-header ul a, body header.active #bottom-header ul a {
+  #header-index #bottom-header ul a, body header.active #bottom-header ul a, header #bottom-header ul a {
     margin-left: 0px;
   }
-  #header-index #bottom-header ul li, body header.active #bottom-header ul li {
+  #header-index #bottom-header ul li, body header.active #bottom-header ul li, header #bottom-header ul li {
     margin: 4px;
   }
-  #header-index #bottom-header ul :last-child a, body header.active #bottom-header ul :last-child a {
+  #header-index #bottom-header ul :last-child a, body header.active #bottom-header ul :last-child a, header #bottom-header ul :last-child a {
     background-color: #fff;
     color: #2B3D41;
   }
@@ -1193,12 +1206,46 @@ footer #footer-app p {
   .nav-menu.active {
     right: 0;
   }
+  #header-other-pages .nav-menu {
+    top: 72px;
+  }
+  #header-other-pages #bottom-header ul {
+    font-weight: 500;
+  }
+  #header-other-pages #bottom-header ul :last-child a {
+    font-size: 15px;
+    margin-left: 0px;
+  }
   #background-top {
     background-position-x: 20%;
   }
   #whats-psy p {
     width: 100%;
     font-size: 16px;
+  }
+  /*Service Page*/
+  #services-page {
+    max-width: 750px;
+    padding: 0px;
+  }
+  #services-page .card {
+    width: 90%;
+  }
+  #services-page .card .card-body {
+    min-height: 100px;
+  }
+  #services-page .card .card-body h5 {
+    font-size: 16px;
+  }
+  #services-page .card .card-body .card-text {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+  #services-page .card .card-body a {
+    font-size: 13px;
+  }
+  #conditions .row .card {
+    width: 15rem;
   }
 }
 
@@ -1310,24 +1357,24 @@ footer #footer-app p {
     line-height: 1.1;
     letter-spacing: 1px;
   }
-  #services .row .card {
+  .services .row .card {
     width: 15rem;
   }
-  #services .row .card img {
+  .services .row .card img {
     height: 170px;
     min-height: 100px;
   }
-  #services .row .card .card-body h5 {
+  .services .row .card .card-body h5 {
     font-size: 16px;
   }
-  #services .row .card .card-body p {
+  .services .row .card .card-body p {
     font-size: 13px;
     margin-bottom: 0px;
   }
-  #services .row .card .card-body a {
+  .services .row .card .card-body a {
     font-size: 13px;
   }
-  #services .button-service a {
+  .services .button-service a {
     font-size: 16px;
   }
   #testimonials .carousel-item {
@@ -1350,6 +1397,35 @@ footer #footer-app p {
     font-size: 16px;
   }
   #blog-homepage .blog-box .blog-homepage-text p {
+    font-size: 13px;
+  }
+  /*Services-page*/
+  #services-page .row {
+    padding: 10px;
+  }
+  #services-page .row .card {
+    width: 95%;
+  }
+  #services-page .row .card img {
+    min-height: 50px;
+    max-height: 120px;
+  }
+  #services-page .row .card .card-body {
+    padding: 0.35rem 0.35rem;
+  }
+  #services-page .row .card .card-body .card-text {
+    display: none;
+  }
+  #services-page .row .card .card-body a {
+    margin-top: 5px;
+  }
+  #conditions .row .card {
+    width: 18rem;
+  }
+  #conditions .row .card .card-body h5 {
+    font-size: 16px;
+  }
+  #conditions .row .card .card-body .card-text {
     font-size: 13px;
   }
 }
