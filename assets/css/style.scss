@@ -1,0 +1,1308 @@
+$darkBlue: #2B3D41;
+$lightBlue: #64B6AC;
+$white: #fff;
+@mixin border-radius{
+    border-radius: 6px;
+    transition: 0.2s;
+}
+@mixin shadow-block{
+    box-shadow: 0px 1px 5px 1px $darkBlue;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $lightBlue;
+  }
+  
+  ::selection {
+    color: $white;
+    background: $lightBlue;
+  }
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    color: $darkBlue;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: $darkBlue;
+    letter-spacing: 2px;
+}
+.h2-white{
+    color: $white;
+}
+.bv-bg-blue{
+    background-color: $darkBlue;
+}
+.bv-bg-lightblue{
+    background-color: $lightBlue;
+}
+header{
+    position: sticky; 
+    top: 0;
+    z-index: 20;
+}
+#top-header{
+    a{
+        font-size: 19px;
+        color: $white;
+    }
+    svg{
+        font-size: 24px;
+    }
+    ul{
+        margin: 0px;
+        a{
+            margin-left: 20px;
+        }
+        a:hover{
+            color: $lightBlue;
+        }
+    }
+}
+#bottom-header{
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+    box-shadow: 0px 0.5px 5px 0.1px #1d292b;
+    #logo{
+        align-items: center;
+        a{
+        color: black;
+        font-size: 18px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+            span{
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: none;
+                letter-spacing: normal;
+                color: $darkBlue;
+            }
+        }
+    }
+    ul{
+        margin-bottom: 0px;
+        margin-top: 5px;
+        :last-child a{
+            background-color: $lightBlue;
+            padding: 5px 10px;
+            @include border-radius();
+            color: $white; 
+            font-size: 15px;
+            margin-top: 4px;
+            margin-left: 40px;
+            font-weight: 500;
+        }
+        :last-child a:hover{
+            background-color: $darkBlue;
+            color: $white;
+        }
+        li a{
+            font-size: 15px;
+            margin-left: 60px;
+            color: $darkBlue;
+        }
+        li a:hover{
+            color: $lightBlue;
+        }
+    }
+}
+#header-index{
+    transition: all 0.3s;
+    padding: 5px;
+    #bottom-header{
+        box-shadow: none;
+        background-color: transparent;
+        ul li a{
+            font-weight: 500;
+            padding: 5px;
+            font-size: 15px;
+            color: $darkBlue;
+        }
+        ul li a:hover{
+            color: $lightBlue;
+        }
+        ul{
+            margin-top: 8.5px;
+            :first-child a{
+                color: $lightBlue;
+            }
+            :last-child a{
+                color: $white;
+                margin-top: 0px;
+                margin-left: 60px;
+            }
+            :last-child a:hover{
+                color: $white;
+                background-color: $darkBlue;
+            }
+        }
+        #logo span{
+            font-weight: 700;
+        }
+    }
+}
+body header.active{
+    @extend #header-index;
+    box-shadow: 0px 0px 6px 1px #1d292b;
+    background: $white;
+}
+#background-top{
+    z-index: 1;
+    height: 800px;
+    background-image: url('../img/2.jpg');
+    background-size: cover;
+    background-position-y: 0%;
+    margin-top: -66px;
+    #text-top{
+        position: relative;
+        top: 45%;
+        left: 5%;
+        width: 50%;
+        h1{
+            font-size: 18px;
+            margin-bottom: -5px;
+            padding: 0px;
+        }
+        p{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        #p-01{
+            font-size: 50px;
+            font-weight: bold;
+            color: $darkBlue;
+            margin: 3px 0px;
+        }
+        #buttons{
+            width: 450px;
+            margin: 50px auto;
+            .col-12{
+                justify-content: space-around;
+            }
+            a{
+                padding: 15px 20px;
+                background-color: $darkBlue;
+                font-weight: 500;
+                color: $white;
+                @include border-radius();
+                font-size: 18px;
+            }
+            a:hover{
+                background-color: $lightBlue;
+            }
+            #a-01{
+                background-color: $lightBlue;
+            }
+            #a-01:hover{
+                background-color: $darkBlue;
+            }
+        }
+    }
+}
+.wrapper{
+    width: 85%;
+    margin: 0px auto;
+}
+#whats-psy{
+    text-align: center;
+    margin: 4rem 0px;
+    h2{
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 20px;
+        width: 65%;
+        line-height: 1.5;
+        margin: 10px auto;
+        letter-spacing: 1.5px;
+    }
+    .emptybottom-border{
+        border-top: 3px solid $darkBlue;
+        width: 20%;
+        margin: 0.25rem auto;
+    }
+}
+#help{
+    margin-top: 0px !important;
+    border: 4px solid $lightBlue;
+    border-radius: 6px;
+    #psychotherapy{
+        font-size: 20px;
+        padding: 40px;
+        color: $white;
+        p{
+            width: 95%;
+            line-height: 1.15;
+            letter-spacing: 1.5px;
+            margin-top: 10px;
+        }
+        ul{
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        #benefits p{
+            font-size: 20px;
+        }
+    }
+    #about{
+        padding: 40px;
+        #about-img{
+            width: 250px;
+            height: 250px;
+            background-image: url('../img/1.jpg');
+            background-size: 450px;
+            background-position: 30% 30%;
+            border-radius: 50%;
+            border: 1.5px solid $darkBlue;
+            margin: 0px auto;
+        }
+        #about-text{
+            font-size: 18px;
+            #aboutfirst-p{
+                margin: 0px auto;
+                font-size: 20px;
+                font-weight: 500;
+                text-align: justify;
+                line-height: 1.2;
+            }
+            ul{
+                margin-top: 2rem;
+                padding: 0px;
+                width: 85%;
+                line-height: 1.1;
+            }
+        }
+    }
+}
+#can-help-with{
+    padding: 20px;
+    padding-bottom: 30px;
+    p{
+        font-size: 18px;
+        width: 100%;
+        margin: 0px auto;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: $white;
+    }
+    .help-with{
+        width: 300px;
+        min-height: 250px;
+        background-color: $lightBlue;
+        padding: 20px;
+        text-align: center;
+        margin: 0px auto;
+        border-radius: 6px;
+        h3{
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 21px;
+            text-transform: uppercase;
+        }
+        #icon-help{
+            font-size: 70px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            border-radius: 50%;
+            background-color: $darkBlue;
+            border: 5px solid $darkBlue;
+            .iconify{
+                color: $lightBlue;
+            }
+        }
+        p{
+            font-size: 14px;
+            color: $darkBlue;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    }
+    .row{
+        margin: 0px auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+.button-service{
+    margin-top: 40px;
+    a{
+        text-transform: uppercase;
+        font-size: 19px;
+        @include border-radius();
+        padding: 5px 18px;
+        background-color: $darkBlue;
+        color: $white;
+        border: 1.5px solid $darkBlue;
+    }
+    a:hover{
+        background-color: $lightBlue;
+        border-color: $lightBlue;
+        color: $white;
+    }
+}
+.services{
+    margin-bottom: 80px;
+    h2{
+        color: $darkBlue;
+        text-align: center;
+    }
+    .card{
+        width: 18rem;
+        border: 0;
+        box-shadow: 2px 2px 7px 0px $darkBlue;
+        img{
+            min-height: 200px;
+        }
+        .btn{
+            border: 1px solid $darkBlue;
+            @include border-radius();
+            background-color: $white;
+            color: $darkBlue
+        }
+        .btn:hover{
+            background-color: $darkBlue;
+            color: $white;
+        }
+    }
+}
+/*Slider*/
+.bv-container{
+    width: 100%;
+    margin: 0px auto;
+}
+#testimonials{
+    padding: 0px;
+    background-color: $darkBlue;
+    h2{
+        background-color: $darkBlue;
+        margin-bottom: 0px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        background-image: none;
+    }
+    .arrow-entity{
+        font-size: 45px;
+        transform: scale(1, 1.2);
+    }
+    .carousel-item{
+        width: 100%;
+        height: 400px;
+        background-color: $darkBlue;
+        padding: 20px;
+        .slika-slider{
+            box-shadow: 0px 1px 8px 1px #000000;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url('../img/test2.webp');
+            background-size: cover;
+            background-position: center;
+            margin: 0px auto;
+            border: 2.5px solid $lightBlue;
+        }
+        #test2{
+            background-image: url('../img/test3.jpg');
+            background-position: left;
+        }
+        #test3{
+            background-image: url('../img/test4.jpg');
+        }
+    }
+}
+#blog-homepage{
+    .wrapper{
+        width: 65%;
+    }
+    #blog-homepage-img{
+        height: 330px;
+        background-image: url('../img/blog1.jpg');
+        background-size: cover;
+    }
+    #blog-homepage-img2{
+        @extend #blog-homepage-img;
+        background-image: url('../img/blog2.jpg');
+    }
+    .blog-homepage-text{
+        a{
+            color: $lightBlue;
+        }
+        border-left: 0;
+        padding: 20px;
+        p{
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    }
+    .blog-box{
+        border-radius: 6px;
+        border: 2px solid $lightBlue;
+        border-left: 13px solid $lightBlue;
+
+    }
+}
+footer{
+    margin-top: 120px;
+    padding: 20px;
+    padding-top: 50px;
+    background-color: $darkBlue;
+    color: $white;
+    #footer-text{
+        #footer-text-first{
+            line-height: 1.7;
+        }
+        #first-child-p{
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        span{
+            font-weight: 500;
+            font-size: 16px;
+        }
+        #footer-phone{
+            color: $white;
+            font-size: 16px;
+        }
+        p{
+            font-size: 16px;
+        }
+        a{
+            font-size: 16px;
+        }
+        h4{
+            font-size: 18px;
+        }
+        ul li{
+            padding-left: 0px;
+            background-color: $darkBlue;
+            border-color: #8f8f8f;
+            a{
+                color: $white;
+            }
+        }
+        a:hover{
+            color: $lightBlue;
+        }
+    }
+    #footer-app{
+        margin-top: 70px;
+        margin-bottom: 30px;
+        a{
+            color: $white;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 8px 30px;
+            border: 2px solid $lightBlue;
+            background-color: transparent;
+            font-weight: 300;
+            letter-spacing: 2px;
+            transition: 0.2s;
+        }
+        a:hover{
+            background-color: $white;
+            color: $darkBlue;
+            border-color: $white;
+        }
+        p{
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+    }
+}
+/*Blog*/
+#coming-soon{
+    text-align: center;
+    color: $lightBlue;
+    border: 3px solid $lightBlue;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 100px auto;
+    margin-bottom: 400px;
+    #coming-soontxt{
+        h1{
+            margin-bottom: 0rem;
+            font-size: 60px;
+        }
+    }
+
+}
+/*Contact*/
+
+#bottom-header .row ul li{ 
+    #home-navbar{
+        color: $darkBlue;
+        :hover{
+            color: $lightBlue;
+        }
+    }
+    #home-navbar:hover{
+        color: $lightBlue;
+    }
+}
+#contact-background, #fees-background{
+    height: auto;
+    background-image: url('../img/services-pages/background-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    #contact-shadow{
+        width: 100%;
+        height: 100%;
+        padding: 80px 0px;
+        background-color: rgba(0,0,0,0.5);
+        .container{
+            width: 60%;
+            position: relative;
+            #contact-form{
+                background-color: $white;
+                padding: 60px;
+                border: 6px solid $lightBlue;
+                span{
+                    font-weight: 500;
+                }
+                .btn{
+                    background-color: $lightBlue;
+                    border-color: $lightBlue;
+                }
+                .btn:hover{
+                    background-color: $darkBlue;
+                    border-color: $darkBlue;
+                    transition: 0.25s;
+                }
+                p, a{
+                    line-height: 1.5;
+                    font-size: 18px;
+                }
+                a{
+                    color: $darkBlue;
+                }
+                form{
+                    #blog-update-list{
+                        padding-left: 0px;
+                    }
+                    .form-check{
+                        .form-check-input{
+                            padding: 0px;
+                            margin: 0px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#contact-page-01, #fees-page{
+    footer{
+        margin-top: 0px;
+    }
+}
+/*Services*/
+#services-title{
+    height: 180px;
+    background-color: $darkBlue;
+    color: $white;
+    h3{
+        font-size: 30px;
+        font-weight: 300;
+    }
+}
+#service-page{
+    h4{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 40px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+}
+#conditions,#services-page{
+    .card{
+        background-color: $darkBlue;
+        color: $white;
+        line-height: 1.2;
+        h5{
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+    }    
+}
+#conditions .card{
+    width: 22rem;
+}
+#services-page{
+    h5{
+        font-size: 18px;
+    }
+    .card{
+        a{
+            background-color: $white;
+            color: $darkBlue;
+            padding: 2px 10px;
+        }
+        img{
+            min-height: 200px;
+        }
+    }
+}
+.services-desc{
+    .bv-col-service{
+        height: 600px;
+    }
+    color: $white;
+    text-align: center;
+    h4{
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2.5px;
+    }
+    p{
+        width: 80%;
+        margin: 20px auto;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 1.5px;
+    }
+    a{
+        margin-top: 20px;
+        background-color: $white;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        color: $darkBlue;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    a:hover{
+        background-color: $lightBlue;
+        color: $white;
+        transition: 0.25s;
+    }
+    #desc-img01{
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/services-pages/couple.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #desc-img02{
+        @extend #desc-img01;
+        background-image: url('../img/services-pages/group.jpg');
+    }
+    #desc-img03{
+        @extend #desc-img01;
+        background-image: url('../img/services-pages/individual.jpg');
+    }
+    #desc-img04{
+        @extend #desc-img01;
+        background-image: url('../img/services-pages/child-therapy.jpg');
+    }
+}
+#couple-page, #group-page{
+    background-color: #E5EEEB;
+}
+.service-desc-textbox{
+    margin-top: 40px;
+    width: 70%;
+    margin: 40px auto;
+    border-left: 3px solid $lightBlue;
+    padding-left: 20px;
+    h4{
+        font-weight: 700;
+        color: $lightBlue;
+        text-transform: capitalize;
+    }
+    p{
+        font-size: 19px;
+        line-height: 1.5;
+        font-family: 'Merriweather', serif;
+    }
+    ul{
+        list-style-type: square;
+        font-size: 18px;
+        font-family: 'Merriweather', serif;
+        li{
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+}
+.last-child-servdesc{
+    border-left: 0px;
+    padding-left: 0px;
+    h4{
+        color: #000000;
+    }
+}
+.cleaner{
+    clear: both;
+}
+.cleaner{
+    display: none;
+}
+/*Fees*/
+#fees-page{
+    #fees-background{
+        height: 90%;
+    }
+    #contact-background{
+        #contact-shadow{
+            padding-bottom: 0px;
+        }
+    }
+}
+#fees-box{
+    padding: 20px;
+    padding-top: 40px;
+    background-color: $white;
+    border: 6px solid $lightBlue;
+    #fees-text{
+        text-align: center;
+        :first-child{
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 0px;
+            color: $darkBlue;
+        }
+        p{
+            font-size: 28px;
+            margin-top: 5px;
+            letter-spacing: 3px;
+            line-height: 1;
+            color: $lightBlue;
+        }
+        :last-child{
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: $darkBlue;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+    table{
+        width: 60%;
+        margin: 40px auto;
+        border: 1px solid $darkBlue;
+        font-size: 18px;
+        td{
+            padding: 10px;
+            border-bottom: 1px solid $darkBlue;
+            border-left: 1px solid $darkBlue;
+        }
+        th{
+            text-align: center;
+            padding: 10px;
+            font-weight: 500;
+            background-color: $darkBlue;
+            color: $white;
+        }
+    }
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    padding-top: 2px;
+}
+.hamburger .bar{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 4px 0px 4px 85%;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: $darkBlue;
+}
+@media only screen and (max-width: 1400px){
+    .services{
+        width: 100%;
+        .card{
+            width: 17rem;
+            .card-text{
+                min-height: 85px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px){
+    #header-index{
+        ul li a{
+            margin-left: 20px;
+        }
+    }
+    #help{
+        #psychotherapy{
+            padding: 15px;
+            #benefits{
+                p{
+                    font-size: 16px;
+                }
+                ul{
+                    font-size: 16px;
+                }
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        #about{
+            padding: 15px;
+            #about-img{
+                width: 200px;
+                height: 200px;
+            }
+            #about-text{
+                font-size: 16px;
+            }
+        }
+    }
+    .services{
+      .card{
+        width: 21rem;
+        margin-top: 20px;
+        img{
+            max-height: 220px;
+            min-height: 225px;
+        }
+      }
+      .col-md-6{
+        padding: 0px;
+        margin-top: 20px;
+      }
+    }
+    #blog-homepage{
+        .wrapper{
+            width: 90%;
+        }
+        #blog-homepage-img{
+            height: auto;
+        }
+    }
+  }
+@media only screen and (max-width: 1000px){
+    #background-top #text-top{
+        #p-01{
+            font-size: 35px;
+        }
+        p{
+            font-size: 20px;
+        }
+        width: 70%;
+        top: 35%;
+        #buttons{
+            .row{
+                padding-right: 20px;
+                .col-12{
+                    justify-content: flex-end;
+                    a{
+                        margin-left: 15px;
+                    }
+                }
+            }
+            width: auto;
+            margin: 20px auto;
+        }
+    }
+    #can-help-with{
+        .help-with{
+            margin-top: 20px;
+        }
+    }
+    #conditions{
+        .cleaner{
+            display: block;
+        }
+        .row{
+            display: block;
+            margin-top: 0px !important;
+            .col-md-6{
+                float: left;
+            }
+            .col-sm-12{
+                margin-top: 10px;
+            }
+            #stress{
+                float: left;
+            }
+        }
+    }
+    footer{
+        text-align: center;
+        h4{
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 0px;
+        }
+        ul li a{
+            padding-left: 16px;
+        }
+        margin-top: 100px;
+        #footer-text-first{
+            #first-child-p{
+                font-size: 20px;
+            }
+            p{
+                font-size: 13px;
+                span{
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+            }
+        }
+        #footer-text{
+            h4{
+                font-size: 16px;
+            }
+            .list-group li a{
+                font-size: 14px;
+            }
+        }
+        #footer-app{
+            a{
+                padding: 8px 20px;
+                font-size: 14px;
+                background-color: $white;
+                border-color: $white;
+                color: $darkBlue;
+            }
+            a:hover{
+                background-color: $lightBlue;
+                border-color: $lightBlue;
+                color: $white;
+            }
+        }
+        .row .col-12 p{
+            font-size: 12px;
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    #header-index, header{   
+        background-color: $white;
+        #top-header .row a{
+            font-size: 12px;
+            svg{
+                font-size: 15px;
+            }
+        }
+        #bottom-header{
+            #logo{
+                a{
+                    font-size: 14px;
+                    span{
+                        font-size: 18px;
+                    }
+                }
+            } 
+            ul{
+                padding-left: 0px;
+                margin-top: 0;
+                a{
+                    margin-left: 0px;
+                }
+                li{
+                    margin: 4px;
+                }
+                :last-child a{
+                    background-color: $white;
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+    .hamburger{
+        display: block;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+        transition: 0.3s;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
+        transition: 0.3s;
+    }
+    .nav-menu{
+        width: 100%;
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        background-color: $white;
+        text-align: center;
+        transition: 0.3s;
+        .nav-item{
+            margin: 16px 0;
+        }
+    }
+    .nav-menu.active{
+        right:0;
+    }
+    #header-other-pages{
+        .nav-menu{
+            top: 72px;
+        }
+        #bottom-header ul{
+            font-weight: 500;
+            :last-child a{
+                font-size: 15px;
+                margin-left: 0px;
+            }
+        }
+    }
+    #background-top{
+        background-position-x: 20%;
+    }
+    #whats-psy{
+        p{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    /*Service Page*/
+    #services-page{
+        max-width: 750px;
+        padding: 0px;
+        .card{
+            width: 90%;
+            .card-body{
+                min-height: 100px;
+                h5{
+                    font-size: 16px;
+                }
+                .card-text{
+                    font-size: 13px;
+                    margin-bottom: 0px;
+                }
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    #conditions .row{
+        .card{
+            width: 15rem;
+        }
+    }
+}
+@media only screen and (max-width: 560px){
+    h2{
+        font-size: 20px;
+    }
+    #background-top{
+        height: 550px;
+        background-position-x: 37%;
+        #text-top{
+            width: 90%;
+            top: 35%;
+            left: 3%;
+            p, h1, #buttons a{
+                font-size: 16px;
+                text-align: left;
+            }
+            p{
+                width: 80%;
+            }
+            h1{
+                font-size: 12px;
+            }
+            #p-01{
+                font-size: 30px;
+            }
+            #buttons{
+                .row .col-12{
+                    justify-content: flex-start;
+                    padding: 0px;
+                    a{
+                        font-size: 14px;
+                        padding: 8px;
+                        margin-left: 10px;
+
+                    }  
+                }
+            }
+        }
+    }
+    #whats-psy{
+        p{
+            font-size: 13px;
+            width: 100%;
+        }
+    }
+    #help{
+        border: 2px solid $lightBlue;
+        #psychotherapy{
+            padding: 20px 0px;
+            order: 2;
+            h2{
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            .col-12 p{
+                font-size:13px;
+            }
+            #benefits{
+                p{font-size: 13px;}
+                ul{
+                    font-size: 13px;
+                }
+            }
+        }
+        #about{
+            order: 1;
+            #about-img{
+                height: 180px;
+                width: 180px;
+            }
+            #about-text, #about-text #aboutfirst-p{
+                font-size: 15px;
+                ul{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    #can-help-with{
+        padding: 20px 0px;
+        .container-lg{
+            padding: 0px;
+            .row{
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 12px;
+            }
+            .help-with{
+                padding: 5px;
+                max-height: 200px;
+                width: 100%;
+                min-height: 180px;
+                #icon-help{
+                    width: 65px;
+                    height: 65px;
+                }
+                h3{
+                    font-size: 16px;
+                    width: 100%;
+                }
+                p{
+                    line-height: 1.1;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    .services{
+        .row .card{
+            width: 15rem;
+            img{
+                height:170px;
+                min-height: 100px;
+            }
+            .card-body{
+                h5{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 13px;
+                    margin-bottom: 0px;
+                }
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+        .button-service a{
+            font-size: 16px;
+        }
+    }
+    #testimonials{
+        .carousel-item{
+            height: 460px;
+        }
+    }
+    #blog-homepage{
+        .wrapper{
+            width: 80%;
+        }
+        .blog-box{
+            border-left: 2.5px solid $lightBlue;
+            border-top: 7px solid $lightBlue;
+            #blog-homepage-img{
+                min-height: 200px;
+            }
+            .blog-homepage-text{
+                padding: 15px;
+                h3{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    /*Services-page*/
+    #services-page .row{
+        padding: 10px;
+        .card{
+            width: 95%;
+            img{
+                min-height: 50px;
+                max-height: 120px;
+            }
+            .card-body{
+                padding: 0.35rem 0.35rem;
+                .card-text{
+                    display: none;
+                }
+                a{
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    #conditions .row{
+        .card{
+            width: 18rem;
+            .card-body{
+                h5{
+                    font-size: 16px;
+                }
+                .card-text{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
